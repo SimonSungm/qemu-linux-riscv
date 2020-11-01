@@ -19,7 +19,7 @@ endif
 export quiet Q BUILD_VERBOSE
 
 #BUSYBOX_SRC := $(CURDIR)/fs/busybox
-LINUX_SRC := $(CURDIR)/kernel/linux-stable
+LINUX_SRC := $(CURDIR)/kernel/linux
 QEMU_SRC := $(CURDIR)/simulator/qemu
 OPENSBI_SRC := $(CURDIR)/firmware/opensbi
 BUILD_TOOLS_DIR := $(CURDIR)/build_tools
@@ -60,18 +60,18 @@ PHONY := all
 all: 
 	@echo -e "Usage: make [target]"
 	@echo -e "Tagerts:"
-	@echo -e "	build: 			Build all necessary images needed to run qemu\n" \
-			 "	      			Note: riscv-gnu-toolchain is needed"
-	@echo -e "	run:			Run qemu, use DEBUG=on to enable deug mode"
+	@echo -e "	build:      	Build all necessary images needed to run qemu\n" \
+			 "	            	Note: riscv-gnu-toolchain is needed"
+	@echo -e "	run:        	Run qemu, use DEBUG=on to enable deug mode"
 	@echo -e ""
-#	@echo -e "	busybox: 		Build root file system with busybox"
-	@echo -e "	linux: 			Build linux kenrel image"
-	@echo -e "	qemu:			Build qemu simulator"
-	@echo -e "	opensbi: 		Build opensbi image"
+#	@echo -e "	busybox:    	Build root file system with busybox"
+	@echo -e "	linux:      	Build linux kenrel image"
+	@echo -e "	qemu:       	Build qemu simulator"
+	@echo -e "	opensbi:    	Build opensbi image"
 	@echo -e "	clean_linux: 	Clean linux kenrel target files and image"
-	@echo -e "	qemu:			Clean qemu target files and image"
-	@echo -e "	opensbi: 		Clean opensbi target files and image"
-	@echo -e "	clean 			Clean all target files"
+	@echo -e "	qemu:       	Clean qemu target files and image"
+	@echo -e "	opensbi:    	Clean opensbi target files and image"
+	@echo -e "	clean       	Clean all target files"
 
 
 
