@@ -46,7 +46,7 @@ opensbi_image := $(INSTALL_DIR)/fw_jump.bin
 
 
 ifeq ($(DEBUG),on) 
-	DEBUG_MODE := "-S -s"
+	DEBUG_MODE := -S -s
 else
 	DEBUG_MODE := 
 endif
